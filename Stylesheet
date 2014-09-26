@@ -1,0 +1,154 @@
+body
+{
+        background:#00FFFF;
+}
+span.tooltip {
+      position: absolute;
+      width: 100px;
+      height: 20px;
+      line-height: 20px;
+      padding: 10px;
+      font-size: 14px;
+      text-align: center;
+      color: rgb(113, 157, 171);
+      background: rgb(255, 255, 255);
+      border: 4px solid rgb(255, 255, 255);
+      border-radius: 5px;
+      text-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 1px;
+      box-shadow: rgba(0, 0, 0, 0.0980392) 1px 1px 2px 0px;
+}
+
+span.tooltip:after {
+      content: "";
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-width: 10px;
+      border-style: solid;
+      border-color: transparent #FFFFFF transparent transparent;
+      top: 10px;
+      left: -30px;
+}
+#box-store
+{
+  height: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+#buildings
+{
+  background: #dd22dd;
+  //border: none;
+  //box-shadow: none;
+  position: fixed;
+  left: 0;
+  top: 28px;
+  height: 15px;
+  width: 150px;
+  min-width: 150px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 100;
+}
+#buildings:hover
+{
+  height: 97.5%;
+  width: 300px;
+  overflow: auto;
+  z-index: 50;
+}
+#building-doge
+{
+  margin-top: 4px;
+  font-size: 18px;
+}
+
+#upgrades
+{
+  background: #dd22dd;
+  position: fixed;
+  top: 28px;
+  left: 150px;
+  height: 15px;
+  min-height: 15px;
+  width: 150px;
+  min-width: 150px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  z-index: 100;
+}
+#upgrades:hover
+{
+  left: 0;
+  height: 97.5%;
+  width: 300px;
+  overflow: auto;
+  z-index: 50;
+}
+
+#achievements
+{
+  position: fixed;
+  right: 0;
+  top: 28px;
+  bottom: 300px;
+  width: 300px;
+  margin: 0;
+  padding: 0;
+}
+
+#resources
+{
+  position: fixed;
+  left: 305px;
+  top: 28px;
+  width: 150px;
+  height: 150px;
+  overflow: auto;
+  margin: 0;
+  padding: 0;
+}
+
+#clickables
+{
+  position: fixed;
+  top: 48%;
+  left: 48%;
+  margin: 0;
+  padding: 0;
+}
+
+#saveBox
+{
+  position: fixed;
+  right: 300px;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+}
+#title
+{
+  position: fixed;
+  top: 28px;
+  left: 45%;
+}
+
+div[id="support"]
+{
+  position: fixed;
+  right: 0;
+  bottom: -30px;
+  color: rgba(0, 0, 0, 0);
+  font-size: 0;
+  text-shadow: none;
+}
+#log
+{
+  position: fixed;
+  left: 305px;
+  width: 20px;
+  height: 3px;
+  opacity: 1;
+}
