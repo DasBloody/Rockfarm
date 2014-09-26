@@ -519,8 +519,3 @@ Upgrades :
   -multiplies efficiency of mine by 200%
   -costs 56250000000000 rock
   -unlocks at 100 mine
-
-
-
-
-//sa
