@@ -1,1 +1,526 @@
-dddddd
+Let's make a game!
+  -Rockfarm
+  -by DasBloody
+  -created on 02/08/2014
+  -last updated on 02/08/2014
+  -version 0
+ 
+Settings :
+  -prices increase by 110%
+  -selling gives back 75%
+  -resources are hidden by default
+  -clickables are hidden by default
+  -buildings are hidden by default
+  -upgrades are hidden by default
+  -achievements are hidden by default
+  -custom stylesheet : https://gist.githubusercontent.com/DasBloody/840556ab7eed69fe5a82/raw/85e44ac5971e19e2322c44d5414fe4ef4ecce769/Rockfarm%20SS
+  -show log
+
+
+
+Resources :
+
+ *rock
+  -named Rock|Rocks
+  -displayed as %a %r
+  -visible
+
+ *totalrock
+  -named All time Rocks
+  -displayed as All time Rocks: %a
+  -visible
+
+ *sentientrock
+  -named Sentient rock|Sentient rocks
+  -displayed as %a %r
+ 
+ *build
+  -named Building|Buildings
+  -displayed as You have %a %r
+
+ *discovery
+  -named Discovery|Discoveries
+  -displayed as %a %r
+
+ *totaldiscovery
+  -displayed as Your scientists had a total amount of %a discoveries
+
+ *idea
+  -abstract
+  
+ *fuel
+  -named Fuel
+  -displayed as %a fuel
+
+ *totalfuel
+  -named totalfuel
+  -displayed as You refined a total amount of %a Fuel
+
+ *excavatorfuel
+  -named excavatorfuel
+ *drillfuel
+  -named drillfuel
+ *minefuel
+  -named minefuel
+
+
+
+Clickables :
+
+ *harvest
+  -named Harvest rocks
+  -gives 1 rock
+  -gives 1 totalrock
+  -visible
+
+ *createsentient
+  -named Create sentient rock
+  -gives 1 sentientrock for 1 rock
+
+
+
+Buildings :
+
+ *sciencelab
+  -"<b>Buy a Science Lab</b><br>Your scientists work hard to discover new ways for you to gather more rocks.<br><i>Every Science Lab gives <b>1 base Discovery for 10 rocks per second</b></i>"
+  -named Science Lab
+  -costs 500000 rock
+  -gives 1 discovery for 5 rock
+  -gives 1 totaldiscovery for 5 rock
+  -represents 1 build
+
+ *sciencebarfiller
+  -abstract
+  -gives 1 idea
+
+ *magiclab
+  -"<b>Buy a Magic Lab</b><br>The magic fuel is produced in these labs.<br><i>Every Magic Lab gives <b>1 base Magic Fuel for 1 rock per second</b></i>"
+  -named Magic Lab
+  -gives 1 fuel for 0.5 rock
+  -gives 1 totalfuel for 0.5 rock
+  -represents 1 build
+
+ *doge
+  -"<b>Buy a Doge</b><br>They are very loyal, and gather some rocks for you.<br><i>Every Doge gives <b>0.2 base Rps</b></i>"
+  -named Doge|Doges
+  -gives 0.2 rock
+  -gives 0.2 totalrock
+  -visible
+  -costs 20 rock
+  -represents 1 build
+
+ *helper
+  -"<b>Hire a Helper</b><br>They got the promise to be payed. But they don't know when. And with what.<br><i>Every Helper gives <b>1 base Rps</b></i>"
+  -named Helper|Helpers
+  -gives 1 rock
+  -gives 1 totalrock
+  -visible
+  -unlocks farmer
+  -costs 100 rock
+  -represents 1 build
+
+ *farmer
+  -"<b>Hire a Farmer</b><br>Professional Rockfarmers, at your service.<br><i>Every Farmer gives <b>2.5 base Rps</b></i>"
+  -named Farmer|Farmers
+  -gives 2.5 rock
+  -gives 2.5 totalrock
+  -unlocks farmteam
+  -costs 500 rock
+  -represents 1 build
+
+ *farmteam
+  -"<b>Hire a whole Farmteam</b><br>Contains a Planter, a watering can and a Gatherer.<br><i>Every Farmteam gives <b>25 base Rps</b></i>"
+  -named Farmteam|Farmteams
+  -gives 25 rock
+  -gives 25 totalrock
+  -unlocks plantation
+  -costs 5000 rock
+  -represents 1 build
+
+ *plantation
+  -"<b>Set up a Plantation</b><br>A whole plantation, with workers, shelters and even tea breaks.<br><i>Every Plantation gives <b>500 base Rps</b></i>"
+  -named Plantation|Plantations
+  -gives 500 rock
+  -gives 500 totalrock
+  -costs 150000 rock
+  -represents 1 build
+
+ *excavator
+  -"<b>Buy an Excavator</b><br>It can dig up even the juicy roots of your rocks.<br><i>Every Excavator gives <b>2500 base Rps</b></i>"
+  -named Excavator|Excavators
+  -gives 2500 rock
+  -gives 2500 totalrock
+  -gives 2500 rock for 0.5 excavatorfuel
+  -gives 2500 totalrock for 0.5 excavatorfuel
+  -costs 1500000 rock
+  -represents 1 build
+
+ *drill
+  -"<b>Buy a drill</b><br>These drills dig deep into the earth and get you the fancy rocks from deep beneath the surface.<br><i>Every Drill gives <b>50000 base Rps</b></i>"
+  -named Drill|Drills
+  -gives 50000 rock
+  -gives 50000 totalrock
+  -gives 50000 rock for 5 drillfuel
+  -gives 50000 totalrock for 5 drillfuel
+  -costs 50000000 rock
+  -represents 1 build
+
+ *mine
+  -"<b>Set up a mine</b><br>With mines you get way more rocks from beyond the surface than you ever could imagine.<br><i>Every Mine gives <b>2500000 base Rps</b></i>"
+  -named Mine|Mines
+  -gives 2500000 rock
+  -gives 2500000 totalrock
+  -gives 2500000 rock for 50 minefuel
+  -gives 2500000 totalrock for 50 minefuel
+  -costs 3000000000 rock
+  -represents 1 build
+
+
+
+Upgrades :
+
+ *science
+  -"<b>Science license</b><br>Yes, this is going to be rock-science!<br><i>Provides you with the ability to finally make something sciency with your rocks.</i>"
+  -named Science license
+  -costs 1000000 rock
+  -unlocks sciencelab
+  -unlocks sciencebarfiller
+  -unlocks at 5 plantation
+  -builds 1 sciencebarfiller
+
+
+ *click01
+  -"<b>Basic lessons</b><br>You might know how to collect a stone, but you don't know how to collect it <i>professionaly</i><br><i>Your clicks give <b>twice as much Rocks</b></i>"
+  -named Basic lessons
+  -multiplies efficiency of harvest by 200%
+  -costs 100 rock
+  -unlocks at 66 rock
+
+ *click02
+  -"<b>Leather Gloves</b><br>These protect your fingers from getting dirty. Nothing else. I mean, who likes dirty fingers?<br><i>Your clicks give <b>twice as much Rocks</b></i>"
+  -named Leather Gloves
+  -multiplies efficiency of harvest by 200%
+  -costs 500 rock
+  -unlocks at 337 rock
+
+ *click03
+  -"<b>Backpack</b><br>Incredible! Now you can carry more rocks at once!<br><i>Your clicks give <b>twice as much Rocks</b></i>"
+  -named Backpack
+  -multiplies efficiency of harvest by 200%
+  -costs 1000 rock
+  -unlocks at 666 rock
+
+ *click04
+  -"<b>Power tools</b><br>With those you can get the big rocks as well. By making them smaller. I guess a hammer could have done the job, but who cares.<br><i>Your clicks give <b>twice as much Rocks</b></i>"
+  -named Power tools
+  -multiplies efficiency of harvest by 200%
+  -costs 2500 rock
+  -unlocks at 1800 rock
+
+ *click05
+  -"<b>Small cart</b><br>Now you can transport even more rocks. If that isn't awesome.<br><i>Your clicks give <b>twice as much Rocks</b></i>"
+  -named Small cart
+  -multiplies efficiency of harvest by 200%
+  -costs 5000 rock
+  -unlocks at 3666 rock
+
+
+
+ *doge01
+  -"<b>Doge training</b><br>Your doges don't know the smell of rocks, so you train them to recognize it.<br><i>Makes your Doges <b>twice as efficient</b></i>"
+  -named Doge training
+  -multiplies efficiency of doge by 200%
+  -costs 100 rock
+  -unlocks at 1 doge
+
+ *doge02
+  -"<b>Doge workout</b><br>This is needed to improve the digging power, so your doges can diggy hole better.<br><i>Makes your Doges <b>twice as efficient</b></i>"
+  -named Doge workout
+  -multiplies efficiency of doge by 200%
+  -costs 300 rock
+  -unlocks at 10 doge
+
+ *doge03
+  -"<b>Doge gloves</b><br>Diggy hole goes very well, but your doges make a mess on your carpet after work. Therefore the gloves.<br><i>Makes your Doges <b>twice as efficient</b></i>"
+  -named Doge gloves
+  -multiplies efficiency of doge by 200%
+  -costs 1500 rock
+  -unlocks at 25 doge
+
+ *doge04
+  -"<b>Doge food</b><br>Turns out your doges can work better when you actually feed them. Who could know this, rocks don't need this...<br><i>Makes your Doges <b>twice as efficient</b></i>"
+  -named Doge food
+  -multiplies efficiency of doge by 200%
+  -costs 7500 rock
+  -unlocks at 50 doge
+
+ *doge05
+  -"<b>Doge steroids</b><br>Greatly increases the diggy hole power of your Doges<br><i>Makes your Doges <b>twice as efficient</b></i>"
+  -named Doge steroids
+  -multiplies efficiency of doge by 200%
+  -costs 375000 rock
+  -unlocks at 100 doge
+
+
+
+ *helper01
+  -
+  -
+  -multiplies efficiency of helper by 200%
+  -costs 500 rock
+  -unlocks at 1 helper
+
+ *helper02
+  -
+  -
+  -multiplies efficiency of helper by 200%
+  -costs 1500 rock
+  -unlocks at 10 helper
+
+ *helper03
+  -
+  -
+  -multiplies efficiency of helper by 200%
+  -costs 7500 rock
+  -unlocks at 25 helper
+
+ *helper04
+  -
+  -
+  -multiplies efficiency of helper by 200%
+  -costs 37500 rock
+  -unlocks at 50 helper
+
+ *helper05
+  -
+  -
+  -multiplies efficiency of helper by 200%
+  -costs 1875000 rock
+  -unlocks at 100 helper
+
+
+
+ *farmer01
+  -
+  -
+  -multiplies efficiency of farmer by 200%
+  -costs 2500 rock
+  -unlocks at 1 farmer
+
+ *farmer02
+  -
+  -
+  -multiplies efficiency of farmer by 200%
+  -costs 7500 rock
+  -unlocks at 10 farmer
+
+ *farmer03
+  -
+  -
+  -multiplies efficiency of farmer by 200%
+  -costs 37500 rock
+  -unlocks at 25 farmer
+
+ *farmer04
+  -
+  -
+  -multiplies efficiency of farmer by 200%
+  -costs 187500 rock
+  -unlocks at 50 farmer
+
+ *farmer05
+  -
+  -
+  -multiplies efficiency of farmer by 200%
+  -costs 9375000 rock
+  -unlocks at 100 farmer
+
+
+
+ *farmteam01
+  -
+  -
+  -multiplies efficiency of farmteam by 200%
+  -costs 25000 rock
+  -unlocks at 1 farmteam
+
+ *farmteam02
+  -
+  -
+  -multiplies efficiency of farmteam by 200%
+  -costs 75000 rock
+  -unlocks at 10 farmteam
+
+ *farmteam03
+  -
+  -
+  -multiplies efficiency of farmteam by 200%
+  -costs 375000 rock
+  -unlocks at 25 farmteam
+
+ *farmteam04
+  -
+  -
+  -multiplies efficiency of farmteam by 200%
+  -costs 1875000 rock
+  -unlocks at 50 farmteam
+
+ *farmteam05
+  -
+  -
+  -multiplies efficiency of farmteam by 200%
+  -costs 93750000 rock
+  -unlocks at 100 farmteam
+
+
+
+ *plantation01
+  -
+  -
+  -multiplies efficiency of plantation by 200%
+  -costs 750000 rock
+  -unlocks at 1 plantation
+
+ *plantation02
+  -
+  -
+  -multiplies efficiency of plantation by 200%
+  -costs 2250000 rock
+  -unlocks at 10 plantation
+
+ *plantation03
+  -
+  -
+  -multiplies efficiency of plantation by 200%
+  -costs 11250000 rock
+  -unlocks at 25 plantation
+
+ *plantation04
+  -
+  -
+  -multiplies efficiency of plantation by 200%
+  -costs 56250000 rock
+  -unlocks at 50 plantation
+
+ *plantation05
+  -
+  -
+  -multiplies efficiency of plantation by 200%
+  -costs 2812500000 rock
+  -unlocks at 100 plantation
+
+
+
+ *excavator01
+  -
+  -
+  -multiplies efficiency of excavator by 200%
+  -costs 7500000 rock
+  -unlocks at 1 excavator
+
+ *excavator02
+  -
+  -
+  -multiplies efficiency of excavator by 200%
+  -costs 22500000 rock
+  -unlocks at 10 excavator
+
+ *excavator03
+  -
+  -
+  -multiplies efficiency of excavator by 200%
+  -costs 112500000 rock
+  -unlocks at 25 excavator
+
+ *excavator04
+  -
+  -
+  -multiplies efficiency of excavator by 200%
+  -costs 562500000 rock
+  -unlocks at 50 excavator
+
+ *excavator05
+  -
+  -
+  -multiplies efficiency of excavator by 200%
+  -costs 28125000000 rock
+  -unlocks at 100 excavator
+
+
+
+ *drill01
+  -
+  -
+  -multiplies efficiency of drill by 200%
+  -costs 250000000 rock
+  -unlocks at 1 drill
+
+ *drill02
+  -
+  -
+  -multiplies efficiency of drill by 200%
+  -costs 750000000 rock
+  -unlocks at 10 drill
+
+ *drill03
+  -
+  -
+  -multiplies efficiency of drill by 200%
+  -costs 3750000000 rock
+  -unlocks at 25 drill
+
+ *drill04
+  -
+  -
+  -multiplies efficiency of drill by 200%
+  -costs 18750000000 rock
+  -unlocks at 50 drill
+
+ *drill05
+  -
+  -
+  -multiplies efficiency of drill by 200%
+  -costs 937500000000 rock
+  -unlocks at 100 drill
+
+
+
+ *mine01
+  -
+  -
+  -multiplies efficiency of mine by 200%
+  -costs 15000000000 rock
+  -unlocks at 1 mine
+
+ *mine02
+  -
+  -
+  -multiplies efficiency of mine by 200%
+  -costs 45000000000 rock
+  -unlocks at 10 mine
+
+ *mine03
+  -
+  -
+  -multiplies efficiency of mine by 200%
+  -costs 225000000000 rock
+  -unlocks at 25 mine
+
+ *mine04
+  -
+  -
+  -multiplies efficiency of mine by 200%
+  -costs 1125000000000 rock
+  -unlocks at 50 mine
+
+ *mine05
+  -
+  -
+  -multiplies efficiency of mine by 200%
+  -costs 56250000000000 rock
+  -unlocks at 100 mine
+
+
+
+
+//sa
